@@ -1,0 +1,18 @@
+# input two DNA sequences of equal length 
+
+seq_1 = "CAGGCCTAGGTTAACGCGTA"
+seq_2 = "AACGCGAATTATGGCGCATA"
+
+#set the count as zero 
+
+count = 0 
+
+# read through the line and if there is a nucleotide that doesn't match then add  1 to the count 
+
+for i in range(len(seq_1)):
+               if seq_1[i] != seq_2[i]:
+                       count += 1
+
+# have it print out the number of different nucleotides
+
+print(count)
