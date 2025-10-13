@@ -1,0 +1,6 @@
+### question 14
+value1 = 100
+while(value1>90):
+    print(value1 + 1)
+    value1 = value1 - 2
+# output 101, 99, 97, 95, 93
