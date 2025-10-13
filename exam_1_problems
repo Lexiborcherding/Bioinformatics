@@ -1,6 +1,72 @@
 ### question 14
-value1 = 100
-while(value1>90):
-    print(value1 + 1)
-    value1 = value1 - 2
+#value1 = 100
+#while(value1>90):
+    #print(value1 + 1)
+    #value1 = value1 - 2
 # output 101, 99, 97, 95, 93
+
+
+
+
+#problem 16
+
+#input strings
+#s = "AAGCTAGCTAGGCTA"
+#t = "AGCT" 
+
+#create empty list for locations 
+#locations = []
+
+#length of strings
+#n = len(s)
+#m = len(t)
+
+#loop through possible starting spots
+#for i in range (n - m + 1):
+    #substring = s[i:i +m ]
+    #if substring == t:
+        #locations.append(i + 1)
+
+# print out put
+#print(locations)
+
+
+
+#problem 19
+
+# Monoisotopic mass table
+mass_table = {
+    'A': 71.03711,
+    'C': 103.00919,
+    'D': 115.02694,
+    'E': 129.04259,
+    'F': 147.06841,
+    'G': 57.02146,
+    'H': 137.05891,
+    'I': 113.08406,
+    'K': 128.09496,
+    'L': 113.08406,
+    'M': 131.04049,
+    'N': 114.04293,
+    'P': 97.05276,
+    'Q': 128.05858,
+    'R': 156.10111,
+    'S': 87.03203,
+    'T': 101.04768,
+    'V': 99.06841,
+    'W': 186.07931,
+    'Y': 163.06333
+}
+
+# Example protein string
+protein = "STAY"
+
+# Initialize total weight
+total_weight = 0
+
+# Loop through each amino acid in the protein
+for aa in protein:
+    total_weight += mass_table[aa]
+
+# Print the result
+print(f"Total weight of {protein}: {total_weight:.5f}")
