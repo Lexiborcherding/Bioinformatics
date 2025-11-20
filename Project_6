@@ -1,0 +1,21 @@
+# input the sample text given
+input_text = """
+NX_3000.12
+Your Favorite Gene
+Mus musculis
+atgaatattgcgcactcgactagctagcgctagccgtctgcatcgatcgcgatcgactgctcggcatcgagcatcagactagcactgcgatcgacgccatcgacgactccgacatcgactcagcagcatcagcacatcgacgcgggcgcgcctcgagcactcgactcgttctcgacatcgtatagatcgatatgagaatatctgcgctacgacttcgcatcgactagcatcgagctacgctagcatagctagcgaccggctacgacgactagagcatctacgcgaactcgacgacgcggcactagcagtcagcagcgatacgatatacgacctagccatcgagatataataaagatagagctccgtacgacgactaga
+"""
+# Split rows
+lines = input_text.strip().split("\n")
+
+accession = lines[0]
+gene = lines[1]
+species = lines[2].replace(" ", "_")
+sequence = lines[3]
+
+# Make FASTA header
+header = f">{accession} {gene} {species}"
+
+# Print FASTA format
+print(header)
+print(sequence)
