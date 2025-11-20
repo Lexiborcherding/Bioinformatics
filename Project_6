@@ -19,3 +19,12 @@ header = f">{accession} {gene} {species}"
 # Print FASTA format
 print(header)
 print(sequence)
+
+# Create FASTA text
+fasta_text = f">{accession} {gene} {species}\n{sequence}"
+
+# Write to FASTA file
+with open("output.fasta", "w") as f:
+    f.write(fasta_text)
+
+print("Created output.fasta")
